@@ -1,8 +1,6 @@
 import argparse
 from timeit import default_timer as timer
 
-file = open("18125013_heuristic.txt","a")
-
 class Warnsdorffs:
     _knight_jumps = ((-2, 1), (-2, -1), 
                     (2, 1), (2, -1),
@@ -59,13 +57,14 @@ if __name__ == "__main__":
     py = int(args.py)
     m = int(args.m)
 
-    file.write("{} {} {}\n".format(px,py,m))
+    path_to_file = "../OUTPUT/18125013_heuristic_" + str(m) + "x" + str(m) + "_" + str(px) + "_" + str(py) + ".txt"
 
+    file = open(path_to_file,"a")
+    file.write("{} {} {}\n".format(px,py,m))
     kt = Warnsdorffs(m,m,px,py) 
     start_time = timer()
     sol = kt.start()
     end_time = timer()
-
     board = [ [ -1 for i in range(m) ] for i in range(m) ]
     t = 0
     for pos in kt.positions:
