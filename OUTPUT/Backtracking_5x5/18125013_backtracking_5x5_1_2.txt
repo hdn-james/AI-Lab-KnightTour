@@ -1,0 +1,4 @@
+1 2 5
+1028892
+4975.322107
+Solution does not exist

@@ -1,0 +1,4 @@
+4 3 5
+1829420
+8941.098848
+Solution does not exist
