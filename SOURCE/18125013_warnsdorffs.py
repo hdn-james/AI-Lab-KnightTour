@@ -78,7 +78,7 @@ if __name__ == "__main__":
     file.write("{}\n".format(sol[1]))
     file.write("{}\n".format((end_time-start_time)*1000))
     if not sol[2]:
-        file.write("Could not find solution")
+        file.write("Could not find solution\n")
     for i in range(m):
         for j in range(m):
             if board[i][j] != -1:

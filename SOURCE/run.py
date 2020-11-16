@@ -49,6 +49,7 @@ def RUN():
     os.system("python3 18125013_backtracking.py -px 4 -py 3 -m 5")
     os.system("python3 18125013_backtracking.py -px 3 -py 1 -m 5")
     os.system("python3 18125013_backtracking.py -px 0 -py 0 -m 5")
+    os.system("python3 18125013_backtracking.py -px 2 -py 4 -m 5")
 
 run = [
     "python3 18125013_backtracking.py -px 0 -py 0 -m 15",
