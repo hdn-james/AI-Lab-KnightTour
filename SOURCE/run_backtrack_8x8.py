@@ -5,35 +5,35 @@ from timeit import default_timer as timer
 
 def thread1():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 0 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 0 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread2():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 1 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 1 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread3():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 2 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 2 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread4():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 3 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 3 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread5():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 4 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 4 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread6():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 5 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 5 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread7():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 6 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 6 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 def thread8():
     for i in range(8):
-        path = "python3 SOURCE/18125013_backtracking.py -px 7 "+ " -py " + str(i) + " -m 8"
+        path = "python3 18125013_backtracking.py -px 7 "+ " -py " + str(i) + " -m 8"
         os.system(path)
 
 
@@ -50,9 +50,9 @@ def main():
 
 if __name__ == "__main__":
     start = timer()
-    os.system("mkdir OUTPUT")
+    os.system("mkdir ../OUTPUT")
     # Run Backtracking with board size 8x8
-    os.system("mkdir OUTPUT/Backtracking_8x8") # Create OUTPUT folder
+    os.system("mkdir ../OUTPUT/Backtracking_8x8") # Create OUTPUT folder
 
     main()
 

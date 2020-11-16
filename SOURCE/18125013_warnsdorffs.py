@@ -58,7 +58,7 @@ if __name__ == "__main__":
     py = int(args.py)
     m = int(args.m)
 
-    path_to_file = "OUTPUT/Heuristic_" + str(m) + "x" + str(m) + "/18125013_heuristic_" + str(m) + "x" + str(m) + "_" + str(px) + "_" + str(py) + ".txt"
+    path_to_file = "../OUTPUT/Heuristic_" + str(m) + "x" + str(m) + "/18125013_heuristic_" + str(m) + "x" + str(m) + "_" + str(px) + "_" + str(py) + ".txt"
 
     file = open(path_to_file,"w")
     file.write("{} {} {}\n".format(px,py,m))

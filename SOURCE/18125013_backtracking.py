@@ -57,7 +57,7 @@ if __name__ == "__main__":
     px = int(args.px)
     py = int(args.py)
     m = int(args.m)
-    path_to_file = "OUTPUT/Backtracking_" + str(m) + "x" + str(m) + "/18125013_backtracking_" + str(m) + "x" + str(m) + "_" + str(px) + "_" + str(py) + ".txt"
+    path_to_file = "../OUTPUT/Backtracking_" + str(m) + "x" + str(m) + "/18125013_backtracking_" + str(m) + "x" + str(m) + "_" + str(px) + "_" + str(py) + ".txt"
 
     file = open(path_to_file,"w")
     file.write("{} {} {}\n".format(px, py, m))
