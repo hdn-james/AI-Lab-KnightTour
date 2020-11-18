@@ -40,14 +40,11 @@ class Backtracking:
             if self.isSafe(new_x, new_y):
                 self.counter += 1
                 self.board[new_x][new_y] = pos
-                if self.solutionUtil(new_x, new_y, Backtracking.move_x, Backtracking.move_y, pos+1):
+                if self.solutionUtil(new_x, new_y, Backtracking.move_x, Backtracking.move_y, pos+1) or (timer() - start_time >= 300):
                     return True
                 self.board[new_x][new_y] = -1
         return False
 
-def handler(signum, frame):
-    raise Exception("end of time")
-    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-px', '--px', help = 'Start at x')
@@ -63,25 +60,22 @@ if __name__ == "__main__":
     file.write("{} {} {}\n".format(px, py, m))
 
     bt = Backtracking(px,py,m)
-    signal.signal(signal.SIGALRM, handler)
-    signal.alarm(300)
     start_time = timer()
-    try:
-        sol = bt.solutionKnightTour()
-        end_time = timer()
-        file.write("{}\n".format(bt.counter))
-        file.write("{}\n".format((end_time-start_time)*1000))
-        if sol:
-            for i in range(bt.size):
-                for j in range(bt.size):
-                    file.write("{} ".format(bt.board[i][j] + 1))
-                file.write("\n")
-        else:
-            file.write("Solution does not exist")
-        file.write("\n")
-    except Exception:
-        file.write("{}\n".format(bt.counter))
-        file.write("{}\n".format(1000*(timer()-start_time)))
-        file.write("Time limit exceeded")
-    signal.alarm(0)
+    sol = bt.solutionKnightTour()
+    end_time = timer()
+    file.write("{}\n".format(bt.counter))
+    file.write("{}\n".format((end_time-start_time)*1000))
+    if (end_time-start_time >= 300):
+        file.write("Time limit exceeded\n")
+    if sol:
+        for i in range(bt.size):
+            for j in range(bt.size):
+                if bt.board[i][j] != -1:
+                    file.write("{} ".format(bt.board[i][j]+1))
+                else:
+                    file.write("-1 ")
+            file.write("\n")
+    else:
+        file.write("Solution does not exist")
+    file.write("\n")
     file.close()
